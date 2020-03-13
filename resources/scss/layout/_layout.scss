@@ -7,6 +7,7 @@
 body {
   background: $black;
   color: $white;
+  cursor: url('../images/cursor.svg'), auto;
 }
 
 article,
@@ -19,10 +20,6 @@ section {
   display: block;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -34,7 +31,7 @@ input[type="radio"] {
   z-index: 1;
 }
 
-.container, .container-full-mobile { 
+.container{ 
   margin: 0 auto;
   position: relative;
 
@@ -55,33 +52,6 @@ input[type="radio"] {
   @include fullhd {
     max-width: $fullhd - 2 * $gap;
     width: $fullhd - 2 * $gap;
-  }
-}
-
-.container-full {
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-}
-
-.container-small {
-  margin: 0 auto;
-  position: relative;
-  width: 70%;
-
-  @include desktop {
-    max-width: $desktop - 6.5 * $gap;
-    width: $desktop - 6.5 * $gap;
-  }
-
-  @include widescreen {
-    max-width: $widescreen - 6.5 * $gap;
-    width: $widescreen - 6.5 * $gap;
-  }
-
-  @include fullhd {
-    max-width: $fullhd - 6.5 * $gap;
-    width: $fullhd - 6.5 * $gap;
   }
 }
 

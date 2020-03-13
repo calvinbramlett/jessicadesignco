@@ -12,7 +12,49 @@
 </head>
 <body>
 
+	<div id="navbar">
+		<a href="/" class="moon-logo stars"><img src="/resources/images/moon.svg"/></a>
+		<div class="menu-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<a href="/" class="main-logo stars"><img src="/resources/images/jessicadesignco.svg"/></a>
+	</div>
+	<div id="navigation">
+		<div class="container">
+			<header class="nav-header">
+				<a href="mailto:jess@jessicadesign.co">jess@jessicadesign.co</a>
+			</header>
+			<nav>
+				<a href="/branding">Branding.</a>
+				<a href="/illustration">Illustration.</a>
+				<a href="/graphic-design">Graphic Design.</a>
+				<a href="/pinterest">Pinterest.</a>
+				<a href="/portfolio">Portfolio.</a>
+				<a href="/about">About.</a>
+				<a href="https://www.thrillingunknown.com" target="blank">Shop art.</a>
+				<a href="/">schedule a call.</a>
+			</nav>
+			<footer class="nav-footer">
+				© 2020 | Jessica <span class="moon-glyph">☾</span> Design Co.
+			</footer>
+		</div>
+	</div>
+	<div id="main-content">
+		<div class="container">
+			<a class="btn">Schedule a Call</a>
+		</div>
+	</div>
 
 	<script src="resources/js/jquery-3.4.1.min.js"></script>
+	<script src="resources/js/sparkle-hover.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".menu-toggle").click(function(){
+	      $("#navbar").toggleClass("active");
+	    });
+		});
+	</script>
 </body>
 </html>

@@ -32,7 +32,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $family-title;
+  font-family: $family-serif;
   font-weight: $weight-bold;
   line-height: 1em;
   width: 100%;
@@ -80,17 +80,18 @@ h6 { font-size: $size-7; } //12px
 }
 
 a, a:visited {
-  color: $blue;
+  color: $primary;
   cursor: pointer;
   text-decoration: none;
   transition: all .2s ease;
+  cursor: url('../images/hover-cursor.svg'), auto;
 
   strong {
     color: currentColor;
   }
 
   &:hover {
-    color: darker($blue, 30%);
+    cursor: url('../images/hover-cursor.svg'), auto;
   }
 }
 
@@ -128,7 +129,9 @@ p {
   }
 }
 
-img, video {
-  vertical-align: bottom;
+.moon-glyph {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Roboto,Segoe UI,Helvetica Neue,sans-serif;
 }
+
+
 

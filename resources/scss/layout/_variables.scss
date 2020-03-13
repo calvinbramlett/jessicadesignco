@@ -3,7 +3,8 @@
 // Colors
 
 $black: #000000 !default;
-$black-light: #36312F !default;
+$black-light: #101010 !default;
+$black-lighter: #141414 !default;
 // $black-ter: hsl(0, 0%, 14%) !default;
 
 $grey-darker: hsl(0, 0%, 21%) !default;
@@ -12,8 +13,6 @@ $grey: hsl(0, 0%, 48%) !default;
 $grey-light: hsl(0, 0%, 71%) !default; 
 $grey-lighter: hsl(0, 0%, 86%) !default;
 
-$white-ter: hsl(0, 0%, 96%) !default;
-$white-bis: hsl(0, 0%, 98%) !default;
 $white: hsl(0, 0%, 100%) !default;
 
 // $orange: hsl(14, 100%, 53%) !default;
@@ -21,19 +20,27 @@ $white: hsl(0, 0%, 100%) !default;
 // $green: #42AC47 !default;
 // $turquoise: hsl(171, 100%, 41%) !default;
 // $cyan: hsl(204, 86%, 53%) !default;
-$blue: #0038FF !default;
+// $blue: #0038FF !default;
 // $blue-dark: #0052A3;
-// $purple: hsl(271, 100%, 71%) !default;
+$purple: #A300FD !default;
 // $red: hsl(348, 100%, 61%) !default;
 
-$primary: $black;
+$primary: $purple;
 
 // Typography
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,700,700i|Poppins:400,500,700&display=swap');
+@font-face {
+  font-family: 'Lowdrag';
+  src: url('../fonts/lowdrag-regular-webfont.woff2') format('woff2'),
+       url('../fonts/lowdrag-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-$family-sans-serif: Poppins;
-$family-title: Playfair Display;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+$family-sans-serif: 'Montserrat', sans-serif;;
+$family-serif: Lowdrag;
 
 $size-1: 5.25rem !default; // 84px
 $size-2: 4rem !default; // 64px
@@ -65,9 +72,9 @@ $strong-weight: $weight-bold !default;
 $navbar-height: 88px;
 
 // The container horizontal gap, which acts as the offset for breakpoints
-$gap: 80px !default;
+$gap: 50px !default;
 
-$section-space: 160px;
+$section-space: 100px;
 $section-space-mobile: $gap;
 
 $mobile: 475px;
