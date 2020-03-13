@@ -1,0 +1,134 @@
+// TYPOGRAPHY .SCSS
+
+html {
+  background-color: $body-background-color;
+  font-size: $body-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: $body-rendering;
+  text-size-adjust: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $body-family;
+}
+
+body {
+  color: $body-color;
+  font-size: .875rem;
+  font-weight: $body-weight;
+  line-height: $body-line-height;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $family-title;
+  font-weight: $weight-bold;
+  line-height: 1em;
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4 {
+  + h1,
+  + h2,
+  + h3,
+  + h4,
+  + h5,
+  + h6,
+  + p,
+  + a {
+    margin-top: 1em;
+  }
+}
+
+h1 { font-size: $size-3; } //34px 
+h2 { font-size: $size-3; margin: 20px 0;}
+h3 { font-size: $size-3; } //34px 
+h4 { font-size: $size-4; } //32px
+h5 { font-size: $size-5; } //24px
+h6 { font-size: $size-7; } //12px
+
+@include tablet {
+  h1 { font-size: 3.375rem; } //54px
+  h2 { font-size: $size-1; }
+  h3 { font-size: $size-2; margin: 50px 0;; }
+  h4 { font-size: $size-3; }
+  h5 { font-size: $size-4; }
+  h6 { font-size: $size-5; }
+}
+
+@include desktop {
+  h1 { font-size: $size-1; }
+  h2 { font-size: $size-1; }
+  h3 { font-size: $size-2; }
+  h4 { font-size: $size-3; }
+  h5 { font-size: $size-4; }
+  h6 { font-size: $size-5; }
+}
+
+a, a:visited {
+  color: $blue;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .2s ease;
+
+  strong {
+    color: currentColor;
+  }
+
+  &:hover {
+    color: darker($blue, 30%);
+  }
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  color: $strong-color;
+  font-weight: $strong-weight;
+}
+
+p {
+  font-size: $body-size;
+  margin-bottom: 1em;
+  font-weight: $weight-light;
+  line-height: $body-line-height;
+
+  a, strong {
+    font-weight: 600;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  + h1,
+  + h2,
+  + h3,
+  + h4,
+  + h5,
+  + h6 {
+    padding-top: 1em;
+  }
+}
+
+img, video {
+  vertical-align: bottom;
+}
+

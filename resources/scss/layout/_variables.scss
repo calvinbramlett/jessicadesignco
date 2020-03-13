@@ -1,0 +1,96 @@
+// VARIABLES .SCSS
+
+// Colors
+
+$black: #000000 !default;
+$black-light: #36312F !default;
+// $black-ter: hsl(0, 0%, 14%) !default;
+
+$grey-darker: hsl(0, 0%, 21%) !default;
+$grey-dark: hsl(0, 0%, 29%) !default;
+$grey: hsl(0, 0%, 48%) !default;
+$grey-light: hsl(0, 0%, 71%) !default; 
+$grey-lighter: hsl(0, 0%, 86%) !default;
+
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+// $orange: hsl(14, 100%, 53%) !default;
+// $yellow: hsl(48, 100%, 67%) !default;
+// $green: #42AC47 !default;
+// $turquoise: hsl(171, 100%, 41%) !default;
+// $cyan: hsl(204, 86%, 53%) !default;
+$blue: #0038FF !default;
+// $blue-dark: #0052A3;
+// $purple: hsl(271, 100%, 71%) !default;
+// $red: hsl(348, 100%, 61%) !default;
+
+$primary: $black;
+
+// Typography
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,700,700i|Poppins:400,500,700&display=swap');
+
+$family-sans-serif: Poppins;
+$family-title: Playfair Display;
+
+$size-1: 5.25rem !default; // 84px
+$size-2: 4rem !default; // 64px
+$size-3: 2.125rem !default; // 34px
+$size-4: 2rem !default; // 32px
+$size-5: 1.5rem !default; // 24px
+$size-6: 1.0625rem !default; // 17px
+$size-7: 0.75rem !default; // 12px
+
+$weight-light: 200 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+$body-background-color: $white !default;
+$body-size: 16px !default;
+$body-rendering: optimizeLegibility !default;
+$body-family: $family-sans-serif !default;
+$body-color: $black !default;
+$body-weight: $weight-normal !default;
+$body-line-height: 1.5em !default;
+
+$strong-color: $black !default;
+$strong-weight: $weight-bold !default;
+
+// Responsiveness
+
+$navbar-height: 88px;
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 80px !default;
+
+$section-space: 160px;
+$section-space-mobile: $gap;
+
+$mobile: 475px;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default;
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default;
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+$fullhd: 1344px + 2 * $gap !default;
+$fullhd-enabled: true !default;
+
+// Miscellaneous
+
+// $easing: ease-out !default;
+// $radius-small: 2px !default;
+// $radius: 4px !default;
+// $radius-large: 6px !default;
+// $radius-rounded: 290486px !default;
+// $speed: 86ms !default;
+

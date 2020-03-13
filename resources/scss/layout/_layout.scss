@@ -1,0 +1,89 @@
+// LAYOUT .SCSS
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $black;
+  color: $white;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+.container {
+  width: 85%;
+  z-index: 1;
+}
+
+.container, .container-full-mobile { 
+  margin: 0 auto;
+  position: relative;
+
+  @include tablet {
+    width: 85%;
+  }
+
+  @include desktop {
+    max-width: $desktop - 2 * $gap;
+    width: $desktop - 2 * $gap;
+  }
+
+  @include widescreen {
+    max-width: $widescreen - 2 * $gap;
+    width: $widescreen - 2 * $gap;
+  }
+
+  @include fullhd {
+    max-width: $fullhd - 2 * $gap;
+    width: $fullhd - 2 * $gap;
+  }
+}
+
+.container-full {
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+}
+
+.container-small {
+  margin: 0 auto;
+  position: relative;
+  width: 70%;
+
+  @include desktop {
+    max-width: $desktop - 6.5 * $gap;
+    width: $desktop - 6.5 * $gap;
+  }
+
+  @include widescreen {
+    max-width: $widescreen - 6.5 * $gap;
+    width: $widescreen - 6.5 * $gap;
+  }
+
+  @include fullhd {
+    max-width: $fullhd - 6.5 * $gap;
+    width: $fullhd - 6.5 * $gap;
+  }
+}
+
+
+
