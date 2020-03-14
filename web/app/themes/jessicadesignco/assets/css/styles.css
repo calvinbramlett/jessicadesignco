@@ -1097,6 +1097,9 @@ input[type="checkbox"],
 input[type="radio"] {
   vertical-align: baseline; }
 
+#main-content {
+  padding: 100px 0; }
+
 .container {
   width: 85%;
   z-index: 1; }
