@@ -1292,6 +1292,54 @@ input[type="radio"] {
     left: 0; }
 
 #main-content {
-  margin-left: 92px;
+  padding-left: 92px;
   position: relative;
   z-index: 1; }
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0; }
+  .home .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%; }
+  .home .home-content {
+    margin: 0 auto; }
+  .home nav {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    margin: 0 auto;
+    align-items: flex-start; }
+    .home nav a {
+      display: inline-block;
+      color: white;
+      font-family: Lowdrag;
+      font-size: 64px;
+      line-height: 1.25em;
+      margin-bottom: 10px;
+      position: relative; }
+      .home nav a:last-child {
+        margin-bottom: 0; }
+      .home nav a:hover {
+        color: #A300FD; }
+  .home .home-footer, .home .home-header {
+    text-align: right;
+    font-size: 12px;
+    color: #4a4a4a;
+    position: relative; }
+  .home .home-header a {
+    color: #4a4a4a; }
+    .home .home-header a:hover {
+      color: #A300FD; }
+  .home .home-footer:before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #4a4a4a; }
