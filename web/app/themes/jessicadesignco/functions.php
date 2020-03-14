@@ -121,9 +121,9 @@ add_action( 'widgets_init', 'jessicadesignco_widgets_init' );
  */
 function jessicadesignco_scripts() {
 	wp_enqueue_style( 'jessicadesignco-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'jessica-styles', get_template_directory_uri() . '/resources/css/styles.css');
+	wp_enqueue_style( 'jessica-styles', get_template_directory_uri() . '/assets/css/styles.css');
 
-	wp_enqueue_script( 'jessica-jquery', get_template_directory_uri() . '/resources/js/jquery-3.4.1.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'jessica-jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'jessicadesignco-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

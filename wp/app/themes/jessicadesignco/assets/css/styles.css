@@ -1080,9 +1080,16 @@ p {
   box-sizing: border-box; }
 
 body {
-  background: #000000;
+  background: red;
   color: white;
   cursor: url("../images/cursor.svg"), auto; }
+
+.admin-bar {
+  margin-top: 46px; }
+
+@media screen and (min-width: 783px) {
+  .admin-bar {
+    margin-top: 32px; } }
 
 article,
 aside,

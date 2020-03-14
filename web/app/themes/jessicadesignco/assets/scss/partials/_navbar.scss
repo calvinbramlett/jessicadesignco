@@ -181,6 +181,17 @@
 	}
 }
 
+.admin-bar #navbar,
+.admin-bar #navigation {
+	top: 46px;
+  height: calc(100vh - 46px);
+
+  @media screen and (min-width: 783px) {
+		top: 32px;
+  	height: calc(100vh - 32px);
+  }
+}
+
 #main-content {
 	padding-left: 92px;
 	position: relative;
