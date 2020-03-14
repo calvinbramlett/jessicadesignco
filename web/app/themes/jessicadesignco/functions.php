@@ -44,7 +44,8 @@ if ( ! function_exists( 'jessicadesignco_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'jessicadesignco' ),
+			'main-menu' => esc_html__( 'Primary', 'jessicadesignco' ),
+			'home-menu' => __( 'Home Menu' )
 		) );
 
 		/*
@@ -161,4 +162,10 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Hide Gutenburg.
+ */
+require get_template_directory() . '/inc/hide-gutenburg.php';
+
 

@@ -1,7 +1,8 @@
-.home {
+.home #main-content {
 	width: 100vw;
 	height: 100vh;
-	padding: $gap 0;
+	padding-top: $gap;
+	padding-bottom: $gap;
 
 	.container {
 		display: flex;

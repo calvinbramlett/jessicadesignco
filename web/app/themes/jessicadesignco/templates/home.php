@@ -1,0 +1,34 @@
+<?php
+/**
+ /* Template Name: Home
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package Jessica_Design_Co
+ */
+
+get_header();
+?>
+
+	<header class="home-header">
+		<a class="btn" href="">Schedule a Call</a>
+	</header>
+	<div class="home-content">
+		<?php if( get_field('text_graphic') ): ?>
+			<img src="<?php echo get_field('text_graphic'); ?>">
+		<?php endif; ?>
+		<nav>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'home-menu'
+			) );
+			?>
+		</nav>
+		<a href="<?php echo get_field('page_link');?>"><?php the_field('page_link_name');?></a>
+	</div>
+	<footer class="home-footer">
+		Shop My Custom Art: <a href="https://www.thrillingunknown.com" target="blank">Thrilling Unknown</a>
+	</footer>
+
+<?php
+get_footer();
