@@ -9,6 +9,7 @@ function ea_disable_editor( $id = false ) {
 	$excluded_templates = array(
 		'templates/home.php',
 		'templates/about.php',
+		'templates/portfolio.php',
 		'templates/blog.php'
 	);
 
