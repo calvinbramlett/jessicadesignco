@@ -22,10 +22,10 @@ get_header();
 		</div>
 		<div class="column is-half">
 			<?php if( get_field('about_image') ): ?>
-				<img src="<?php echo get_field('about_image'); ?>"/>
+				<img src="<?php echo get_field('about_image'); ?>" data-pin-nopin="true"/>
 			<?php endif; ?>
 			<?php if( get_field('image_overlay_graphic') ): ?>
-				<img src="<?php echo get_field('image_overlay_graphic'); ?>"/>
+				<img src="<?php echo get_field('image_overlay_graphic'); ?>" data-pin-nopin="true"/>
 			<?php endif; ?>
 		</div>
 	</div>
