@@ -23,13 +23,13 @@
 <body <?php body_class(); ?>>
 
 <div id="navbar">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="moon-logo stars"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/moon.svg"/></a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="moon-logo"><?php svg('moon'); ?></a>
 	<div class="menu-toggle">
 		<span></span>
 		<span></span>
 		<span></span>
 	</div>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="main-logo stars"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/jessicadesignco.svg"/></a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="main-logo"><?php svg('jessicadesignco'); ?></a>
 </div>
 <div id="navigation">
 	<div class="container">

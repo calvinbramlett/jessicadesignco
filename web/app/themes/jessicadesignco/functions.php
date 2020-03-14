@@ -168,4 +168,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/hide-gutenburg.php';
 
+/**
+ * SVG Support
+ */
+require get_template_directory() . '/inc/svg.php';
+
 

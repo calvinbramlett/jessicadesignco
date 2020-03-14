@@ -1,14 +1,17 @@
 .home #main-content {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	padding-top: $gap;
 	padding-bottom: $gap;
+	display: flex;
+	flex-direction: column;
 
 	.container {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		min-height: 100%;
+		flex-grow: 1;
 	}	
 
 	.home-content {
@@ -66,4 +69,14 @@
 		left: 0;
 		background: $grey-dark;
 	}
+}
+
+.admin-bar.home #main-content {
+	top: 0;
+  min-height: calc(100vh - 46px);
+
+  @media screen and (min-width: 783px) {
+		top: 0;
+  	min-height: calc(100vh - 32px);
+  }
 }

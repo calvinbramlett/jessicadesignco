@@ -1,5 +1,17 @@
 // LAYOUT .SCSS
 
+html[lang="en-US"] {
+  margin-top: 0!important;
+}
+
+body.admin-bar {
+  padding-top: 46px;
+
+  @media screen and (min-width: 783px) {
+    padding-top: 32px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

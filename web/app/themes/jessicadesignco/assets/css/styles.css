@@ -1076,6 +1076,15 @@ p {
 .moon-glyph {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Roboto,Segoe UI,Helvetica Neue,sans-serif; }
 
+html[lang="en-US"] {
+  margin-top: 0 !important; }
+
+body.admin-bar {
+  padding-top: 46px; }
+  @media screen and (min-width: 783px) {
+    body.admin-bar {
+      padding-top: 32px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -1311,14 +1320,17 @@ input[type="radio"] {
 
 .home #main-content {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column; }
   .home #main-content .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100%; }
+    min-height: 100%;
+    flex-grow: 1; }
   .home #main-content .home-content {
     margin: 0 auto; }
   .home #main-content nav {
@@ -1357,3 +1369,11 @@ input[type="radio"] {
     top: 50%;
     left: 0;
     background: #4a4a4a; }
+
+.admin-bar.home #main-content {
+  top: 0;
+  min-height: calc(100vh - 46px); }
+  @media screen and (min-width: 783px) {
+    .admin-bar.home #main-content {
+      top: 0;
+      min-height: calc(100vh - 32px); } }
