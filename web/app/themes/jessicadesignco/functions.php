@@ -125,6 +125,7 @@ function jessicadesignco_scripts() {
 	wp_enqueue_style( 'jessica-styles', get_template_directory_uri() . '/assets/css/styles.css');
 
 	wp_enqueue_script( 'jessica-jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/assets/js/masonry.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'jessicadesignco-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

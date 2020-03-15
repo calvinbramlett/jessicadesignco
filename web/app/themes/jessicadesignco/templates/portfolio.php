@@ -18,10 +18,12 @@ get_header();
 		<div class="column is-half">
 		</div>
 	</div>
-
+	
 	<?php if( have_rows('portfolio') ): ?>
-		<div id="portfolio-list">
+		<div id="portfolio-list" class="masonry">
+
 	    <?php while( have_rows('portfolio') ): the_row(); ?>
+
 	      <?php if( get_row_layout() == 'image' ): ?>
 
 					<?php
@@ -41,23 +43,39 @@ get_header();
 
 						  ?>
 
-						  <div class="portfolio-image">
-								<img src="<?php echo esc_url($img_size); ?>" alt="<?php echo esc_attr($alt); ?>"/>
-				     		<a href="https://www.pinterest.com/pin/create/button/" data-pin-media="<?php echo esc_url($url); ?>" data-pin-do="buttonPin" data-pin-url="<?php echo esc_url( home_url( '/' ) ); ?>" data-pin-description="Jessica Design Co | <?php echo esc_attr($caption); ?>" data-pin-id="<?php echo $pin_url ?>">Pin It</a>
+						  <div class="masonry-item">
+						  	<div class="portfolio-image">
+									<img src="<?php echo esc_url($img_size); ?>" alt="<?php echo esc_attr($alt); ?>"/>
+					     		<a href="https://www.pinterest.com/pin/create/button/" data-pin-media="<?php echo esc_url($url); ?>" data-pin-do="buttonPin" data-pin-url="<?php echo esc_url( home_url( '/' ) ); ?>" data-pin-description="Jessica Design Co | <?php echo esc_attr($caption); ?>" data-pin-id="<?php echo $pin_url ?>">Pin It</a>
+					     	</div>
 				     	</div>
 
 						<?php endif; ?>
 
 	      <?php elseif( get_row_layout() == 'testimonial' ): ?>
 
-	        <div class="testimonial">
-						<h6>Testimonial</h6>
-	        	<h4 class="quote"><?php the_sub_field('quote'); ?></h4>
+	        <div class="masonry-item">
+	        	<div class="testimonial">
+							<h6 class="testimonial-header">Testimonial</h6>
+		        	<h4 class="quote"><?php the_sub_field('quote'); ?></h4>
 
-	        	<img src="<?php echo get_sub_field('image'); ?>" data-pin-nopin="true"/>
+		        	<div class="columns quote-byline is-gapless is-mobile">
+		        		<div class="column">
+		        			<?php if(get_sub_field('image')): ?>
+										<div class="testimonial-image" style="background-image: url('<?php echo get_sub_field('image')['url']; ?>');"></div>
+									<?php else: ?>
+										<div class="testimonial-image"></div>
+		        			<?php endif; ?>
+		        		</div>
+		        		<div class="column">
+									<h5><?php the_sub_field('name'); ?></h5>
+									<h6><?php the_sub_field('company_name'); ?></h6>
+		        		</div>
+		        	</div>
 
-	        	<div class="testimonial-footer"><?php svg('moon'); ?></div>
-	        </div>
+		        	<div class="testimonial-footer"><?php svg('moon'); ?></div>
+		        </div>
+		      </div>
 
 	      <?php endif; ?>
 	    <?php endwhile; ?>

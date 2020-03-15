@@ -23,7 +23,15 @@
 		$(".menu-toggle").click(function(){
       $("#navbar").toggleClass("active");
     });
+
+    $('.masonry').masonry({
+		  fitWidth: true,
+		  itemSelector: '.masonry-item'
+		});
+
 	});
+
+
 </script>
 
 
