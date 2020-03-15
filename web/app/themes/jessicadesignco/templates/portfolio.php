@@ -10,6 +10,18 @@
 get_header();
 ?>
 
+	<?php
+		$header_graphic = get_field('header_graphic');
+		if( $header_graphic ):
+
+		  $url = $header_graphic['url'];
+		  $size = 'large';
+		  $graphic = $header_graphic['sizes'][ $size ];
+		  ?>
+		  <img class="header-graphic" src="<?php echo esc_url($graphic); ?>" />
+
+	<?php endif; ?>
+
 	<div class="columns is-multiline">
 		<div class="column is-half">
 			<h5 class="subtitle">Recent Work</h5>
@@ -81,11 +93,6 @@ get_header();
 	    <?php endwhile; ?>
 	  </div>
 	<?php endif; ?>
-
-	<!-- <div class="rainbow-overlay">
-	</div> -->
-
-	<?php get_template_part( 'template-parts/rainbow' ); ?>
 
 <?php
 get_footer();

@@ -941,7 +941,7 @@ textarea {
   font-family: "Montserrat", sans-serif; }
 
 body {
-  color: #000000;
+  color: #0B0B0B;
   font-size: .875rem;
   font-weight: 400;
   line-height: 1.5em; }
@@ -1054,7 +1054,7 @@ span {
   font-weight: inherit; }
 
 strong {
-  color: #000000;
+  color: #0B0B0B;
   font-weight: 700; }
 
 p {
@@ -1102,7 +1102,7 @@ body.admin-bar {
   box-sizing: border-box; }
 
 body {
-  background: #000000;
+  background: #0B0B0B;
   color: white;
   cursor: url("../images/cursor.svg"), auto; }
 
@@ -1125,8 +1125,7 @@ input[type="radio"] {
 .container {
   width: 85%;
   z-index: 1;
-  margin: 0 auto;
-  position: relative; }
+  margin: 0 auto; }
   @media screen and (min-width: 769px), print {
     .container {
       max-width: 569px;
@@ -1143,6 +1142,11 @@ input[type="radio"] {
     .container {
       max-width: 1244px;
       width: 1244px; } }
+
+.header-graphic {
+  position: absolute;
+  top: -20px;
+  right: -20px; }
 
 .text-centered {
   text-align: center; }
@@ -1330,41 +1334,6 @@ input[type="radio"] {
   position: relative;
   z-index: 1; }
 
-.rainbow-overlay {
-  position: fixed;
-  z-index: 500;
-  top: 300px;
-  right: -350px;
-  width: 850px;
-  height: 350px;
-  transform: rotate(73deg);
-  pointer-events: none;
-  mix-blend-mode: screen;
-  -webkit-animation: rainbow 8s ease infinite alternate both;
-  animation: rainbow 8s ease infinite alternate both; }
-
-@-webkit-keyframes rainbow {
-  0% {
-    -webkit-transform: scale(1) rotate(73deg);
-    transform: scale(1) rotate(73deg); }
-  50% {
-    -webkit-transform: scale(1.2) rotate(75deg);
-    transform: scale(1.2) rotate(75deg); }
-  100% {
-    -webkit-transform: scale(0.8) rotate(68deg);
-    transform: scale(0.8) rotate(68deg); } }
-
-@keyframes rainbow {
-  0% {
-    -webkit-transform: scale(1) rotate(73deg);
-    transform: scale(1) rotate(73deg); }
-  100% {
-    -webkit-transform: scale(1.2) rotate(75deg);
-    transform: scale(1.2) rotate(75deg); }
-  100% {
-    -webkit-transform: scale(0.8) rotate(68deg);
-    transform: scale(0.8) rotate(68deg); } }
-
 .home #main-content {
   width: 100vw;
   min-height: 100vh;
@@ -1487,7 +1456,7 @@ input[type="radio"] {
   position: relative;
   display: inline-block;
   margin-bottom: 50px;
-  background: #000000;
+  background: #0B0B0B;
   display: flex; }
 
 .testimonial .testimonial-header,
@@ -1576,8 +1545,3 @@ input[type="radio"] {
   .testimonial .testimonial-footer:after {
     top: 10px;
     margin-left: 18px; }
-
-.page-template-portfolio .rainbow-overlay {
-  width: 1000px;
-  height: 600px;
-  right: -500px; }

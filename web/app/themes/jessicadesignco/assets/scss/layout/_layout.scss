@@ -46,7 +46,6 @@ input[type="radio"] {
   width: 85%;
   z-index: 1;
   margin: 0 auto;
-  position: relative;
 
   @include tablet {
     max-width: $tablet - 2 * $section-space;
@@ -69,5 +68,10 @@ input[type="radio"] {
   }
 }
 
+.header-graphic {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
 
 

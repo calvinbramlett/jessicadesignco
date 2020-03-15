@@ -11,20 +11,31 @@ get_header();
 ?>
 
 	<?php
-	while ( have_posts() ) :
-		the_post();
+	$header_graphic = get_field('header_graphic');
+	if( $header_graphic ):
 
-		get_template_part( 'template-parts/content', get_post_type() );
+	  $url = $header_graphic['url'];
+	  $size = 'medium';
+	  $graphic = $header_graphic['sizes'][ $size ];
+	  ?>
+	  <img class="header-graphic" src="<?php echo esc_url($graphic); ?>" />
 
-		the_post_navigation();
+	<?php endif; ?>
 
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
 
-	endwhile; // End of the loop.
-	?>
+	<div class="columns is-multiline">
+		<div class="column is-half">
+			<h5 class="subtitle">Services</h5>
+			<?php the_title( '<h1 class="page-title">', '.</h1>' );?>
+
+			<?php the_field('intro_copy'); ?>
+		</div>
+		<div class="column is-half">
+		</div>
+	</div>
+
+
+	
 
 <?php
 get_footer();
