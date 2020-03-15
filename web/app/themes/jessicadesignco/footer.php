@@ -29,9 +29,9 @@
 		  itemSelector: '.masonry-item'
 		});
 
+		$('body').fitvids();
+
 	});
-
-
 </script>
 
 

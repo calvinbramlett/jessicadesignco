@@ -34,8 +34,13 @@ get_header();
 		</div>
 	</div>
 
+	<?php if( get_field('video')): ?>
+		<video controls poster="<?php echo get_field('video_thumbnail'); ?>" controlsList="nodownload" disablePictureInPicture >
+			<source src="<?php echo get_field('video'); ?>" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	<?php endif; ?>
 
-	
 
 <?php
 get_footer();
