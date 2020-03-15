@@ -956,7 +956,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   white-space: normal;
   word-wrap: break-word;
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+  letter-spacing: 2px; }
 
 h1 + h1,
 h1 + h2,
@@ -1073,6 +1074,18 @@ p {
   p + h6 {
     padding-top: 1em; }
 
+h1.page-title {
+  font-size: 44px;
+  margin-bottom: 50px; }
+
+h5.subtitle {
+  color: #A300FD;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2.75px;
+  font-weight: 400; }
+
 .moon-glyph {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Roboto,Segoe UI,Helvetica Neue,sans-serif; }
 
@@ -1111,26 +1124,25 @@ input[type="radio"] {
 
 .container {
   width: 85%;
-  z-index: 1; }
-
-.container {
+  z-index: 1;
   margin: 0 auto;
   position: relative; }
   @media screen and (min-width: 769px), print {
     .container {
-      width: 85%; } }
+      max-width: 569px;
+      width: 569px; } }
   @media screen and (min-width: 1060px) {
     .container {
-      max-width: 960px;
-      width: 960px; } }
+      max-width: 860px;
+      width: 860px; } }
   @media screen and (min-width: 1252px) {
     .container {
-      max-width: 1152px;
-      width: 1152px; } }
+      max-width: 1052px;
+      width: 1052px; } }
   @media screen and (min-width: 1444px) {
     .container {
-      max-width: 1344px;
-      width: 1344px; } }
+      max-width: 1244px;
+      width: 1244px; } }
 
 .text-centered {
   text-align: center; }

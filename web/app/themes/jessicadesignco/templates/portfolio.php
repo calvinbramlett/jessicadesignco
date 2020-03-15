@@ -13,7 +13,7 @@ get_header();
 	<div class="columns is-multiline">
 		<div class="column is-half">
 			<h5 class="subtitle">Recent Work</h5>
-			<?php the_title( '<h1 class="entry-title">', '.</h1>' );?>
+			<?php the_title( '<h1 class="page-title">', '.</h1>' );?>
 		</div>
 		<div class="column is-half">
 		</div>

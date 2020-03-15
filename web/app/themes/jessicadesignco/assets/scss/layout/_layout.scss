@@ -45,29 +45,27 @@ input[type="radio"] {
 .container {
   width: 85%;
   z-index: 1;
-}
-
-.container{ 
   margin: 0 auto;
   position: relative;
 
   @include tablet {
-    width: 85%;
+    max-width: $tablet - 2 * $section-space;
+    width: $tablet - 2 * $section-space;
   }
 
   @include desktop {
-    max-width: $desktop - 2 * $gap;
-    width: $desktop - 2 * $gap;
+    max-width: $desktop - 2 * $section-space;
+    width: $desktop - 2 * $section-space;
   }
 
   @include widescreen {
-    max-width: $widescreen - 2 * $gap;
-    width: $widescreen - 2 * $gap;
+    max-width: $widescreen - 2 * $section-space;
+    width: $widescreen - 2 * $section-space;
   }
 
   @include fullhd {
-    max-width: $fullhd - 2 * $gap;
-    width: $fullhd - 2 * $gap;
+    max-width: $fullhd - 2 * $section-space;
+    width: $fullhd - 2 * $section-space;
   }
 }
 
