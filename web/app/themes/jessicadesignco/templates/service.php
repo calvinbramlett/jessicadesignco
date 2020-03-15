@@ -22,25 +22,30 @@ get_header();
 
 	<?php endif; ?>
 
+	<div class="service-header">
+		<div class="columns is-multiline">
+			<div class="column is-half">
+				<h5 class="subtitle">Services</h5>
+				<?php the_title( '<h1 class="page-title">', '.</h1>' );?>
 
-	<div class="columns is-multiline">
-		<div class="column is-half">
-			<h5 class="subtitle">Services</h5>
-			<?php the_title( '<h1 class="page-title">', '.</h1>' );?>
+				<?php the_field('intro_copy'); ?>
 
-			<?php the_field('intro_copy'); ?>
+				<a href="" class="btn" target="blank">Schedule a call</a>
+			</div>
+			<div class="column is-half">
+			</div>
 		</div>
-		<div class="column is-half">
-		</div>
+
+
+		<?php if( get_field('video')): ?>
+			<video controls poster="<?php echo get_field('video_thumbnail'); ?>" controlsList="nodownload" disablePictureInPicture >
+				<source src="<?php echo get_field('video'); ?>" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+		<?php endif; ?>
 	</div>
 
-	<?php if( get_field('video')): ?>
-		<video controls poster="<?php echo get_field('video_thumbnail'); ?>" controlsList="nodownload" disablePictureInPicture >
-			<source src="<?php echo get_field('video'); ?>" type="video/mp4" />
-			Your browser does not support the video tag.
-		</video>
-	<?php endif; ?>
-
+	<?php get_template_part('template-parts/page-footer'); ?>
 
 <?php
 get_footer();

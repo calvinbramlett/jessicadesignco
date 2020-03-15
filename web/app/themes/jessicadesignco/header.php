@@ -33,9 +33,11 @@
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="main-logo"><?php svg('jessicadesignco'); ?></a>
 </div>
 <div id="navigation">
+	<div class="stars"></div>
+	<div class="twinkling"></div>
 	<div class="container">
 		<header class="nav-header">
-			<a href="mailto:jess@jessicadesign.co">jess@jessicadesign.co</a>
+			<a href="mailto:jess@jessicadesign.co?subject=Jessica Design Co. | Contact" target="blank">jess@jessicadesign.co</a>
 		</header>
 		<nav>
 			<?php

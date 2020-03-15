@@ -45,7 +45,7 @@ if ( ! function_exists( 'jessicadesignco_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'main-menu' => esc_html__( 'Primary', 'jessicadesignco' ),
-			'home-menu' => __( 'Home Menu' )
+			'services-menu' => __( 'Services Menu' )
 		) );
 
 		/*

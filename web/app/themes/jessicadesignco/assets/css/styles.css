@@ -1173,6 +1173,84 @@ video {
 .m-b-0 {
   margin-bottom: 0; }
 
+.content-footer {
+  border-top: solid 1px #4a4a4a;
+  border-bottom: solid 1px #4a4a4a;
+  padding: 66.66667px 0;
+  margin-top: 100px;
+  margin-bottom: 50px; }
+
+.footer-nav-container {
+  align-items: center; }
+  .footer-nav-container h6 {
+    font-size: 12px;
+    color: #4a4a4a;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+    text-transform: uppercase; }
+  .footer-nav-container .portfolio-link {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: underline;
+    color: #4a4a4a; }
+    .footer-nav-container .portfolio-link:hover {
+      color: #A300FD; }
+  .footer-nav-container .footer-button {
+    text-align: right; }
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .footer-nav a {
+    display: inline-block;
+    color: white;
+    font-family: Lowdrag;
+    font-size: 32px;
+    line-height: 1.25em;
+    margin-bottom: 10px;
+    position: relative; }
+    .footer-nav a:last-child {
+      margin-bottom: 0; }
+    .footer-nav a:hover {
+      color: #A300FD; }
+  .footer-nav .current-menu-item {
+    display: none; }
+
+.social-footer .columns {
+  align-items: center; }
+  .social-footer .columns .column:last-child {
+    text-align: right; }
+    .social-footer .columns .column:last-child a {
+      color: #4a4a4a; }
+      .social-footer .columns .column:last-child a:hover {
+        color: #A300FD; }
+
+.social-footer .social-nav {
+  display: flex;
+  align-items: center; }
+  .social-footer .social-nav a {
+    margin-right: 15px;
+    display: block;
+    line-height: 0; }
+    .social-footer .social-nav a svg g {
+      transition: all .2s ease; }
+    .social-footer .social-nav a:hover svg g {
+      fill: #A300FD; }
+  .social-footer .social-nav-name {
+    color: #4a4a4a;
+    position: relative;
+    padding-left: 50px; }
+    .social-footer .social-nav-name:before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: #4a4a4a;
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0; }
+
 .btn {
   display: inline-block;
   background: transparent;
@@ -1264,20 +1342,25 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100%; }
+    min-height: 100%;
+    position: relative;
+    z-index: 5; }
   #navigation nav {
     display: flex;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 66.66667px 0;
     margin: 0 auto;
     align-items: flex-start; }
+    #navigation nav .menu-item {
+      padding-bottom: 15px; }
+      #navigation nav .menu-item:last-child {
+        margin-bottom: 0; }
     #navigation nav a {
       display: inline-block;
       color: white;
       font-family: Lowdrag;
       font-size: 44px;
       line-height: 1.25em;
-      margin-bottom: 10px;
       position: relative; }
       #navigation nav a:before {
         content: '';
@@ -1294,12 +1377,21 @@ video {
         transform: opacity .2s ease;
         opacity: 0;
         pointer-events: none; }
-      #navigation nav a:last-child {
-        margin-bottom: 0; }
       #navigation nav a:hover {
         color: #A300FD; }
         #navigation nav a:hover:before {
           opacity: 1; }
+    #navigation nav .shop-link a:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: url("../images/shop-sparkle.png") no-repeat;
+      background-position: center center;
+      top: -15px;
+      right: -30px;
+      background-size: contain; }
   #navigation .nav-footer, #navigation .nav-header {
     text-align: right;
     font-size: 12px;
@@ -1338,6 +1430,54 @@ video {
   padding-left: 92px;
   position: relative;
   z-index: 1; }
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+
+.stars, .twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.stars {
+  background: #101010 url("../images/stars.png") repeat top center;
+  z-index: 0;
+  opacity: .5; }
+
+.twinkling {
+  background: transparent url("../images/stars-mask.png") repeat top center;
+  z-index: 1;
+  -moz-animation: move-twink-back 400s linear infinite;
+  -ms-animation: move-twink-back 400s linear infinite;
+  -o-animation: move-twink-back 400s linear infinite;
+  -webkit-animation: move-twink-back 400s linear infinite;
+  animation: move-twink-back 400s linear infinite; }
 
 .home #main-content {
   width: 100vw;
@@ -1550,3 +1690,6 @@ video {
   .testimonial .testimonial-footer:after {
     top: 10px;
     margin-left: 18px; }
+
+.service-header video {
+  margin-top: 100px; }
