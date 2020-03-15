@@ -1330,6 +1330,41 @@ input[type="radio"] {
   position: relative;
   z-index: 1; }
 
+.rainbow-overlay {
+  position: fixed;
+  z-index: 500;
+  top: 300px;
+  right: -350px;
+  width: 850px;
+  height: 350px;
+  transform: rotate(73deg);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  -webkit-animation: rainbow 8s ease infinite alternate both;
+  animation: rainbow 8s ease infinite alternate both; }
+
+@-webkit-keyframes rainbow {
+  0% {
+    -webkit-transform: scale(1) rotate(73deg);
+    transform: scale(1) rotate(73deg); }
+  50% {
+    -webkit-transform: scale(1.2) rotate(75deg);
+    transform: scale(1.2) rotate(75deg); }
+  100% {
+    -webkit-transform: scale(0.8) rotate(68deg);
+    transform: scale(0.8) rotate(68deg); } }
+
+@keyframes rainbow {
+  0% {
+    -webkit-transform: scale(1) rotate(73deg);
+    transform: scale(1) rotate(73deg); }
+  100% {
+    -webkit-transform: scale(1.2) rotate(75deg);
+    transform: scale(1.2) rotate(75deg); }
+  100% {
+    -webkit-transform: scale(0.8) rotate(68deg);
+    transform: scale(0.8) rotate(68deg); } }
+
 .home #main-content {
   width: 100vw;
   min-height: 100vh;
@@ -1541,3 +1576,8 @@ input[type="radio"] {
   .testimonial .testimonial-footer:after {
     top: 10px;
     margin-left: 18px; }
+
+.page-template-portfolio .rainbow-overlay {
+  width: 1000px;
+  height: 600px;
+  right: -500px; }

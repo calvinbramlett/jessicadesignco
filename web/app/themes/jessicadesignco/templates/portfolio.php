@@ -82,5 +82,10 @@ get_header();
 	  </div>
 	<?php endif; ?>
 
+	<!-- <div class="rainbow-overlay">
+	</div> -->
+
+	<?php get_template_part( 'template-parts/rainbow' ); ?>
+
 <?php
 get_footer();
