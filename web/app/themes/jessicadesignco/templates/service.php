@@ -12,6 +12,7 @@ get_header();
 
 	<?php
 	$header_graphic = get_field('header_graphic');
+
 	if( $header_graphic ):
 
 	  $url = $header_graphic['url'];
@@ -28,9 +29,11 @@ get_header();
 				<h5 class="subtitle">Services</h5>
 				<?php the_title( '<h1 class="page-title">', '.</h1>' );?>
 
-				<?php the_field('intro_copy'); ?>
-
-				<a href="" class="btn" target="blank">Schedule a call</a>
+				<div class="content">
+					<?php the_field('intro_copy'); ?>
+				</div>
+				
+				<?php get_template_part('template-parts/button'); ?>
 			</div>
 			<div class="column is-half">
 			</div>

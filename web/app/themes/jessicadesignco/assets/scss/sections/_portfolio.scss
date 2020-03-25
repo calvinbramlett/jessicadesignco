@@ -1,16 +1,96 @@
+#portfolio-list {
+	width: calc(100% + #{$gap});
+}
+
 .masonry {
-	margin: -#{$column-gap};
+	width: 100% !important;
 }
 
 .grid-sizer,
-.masonry-item {
-	width: 100%;
-	padding: $column-gap;
+.masonry-item,
+.grid-item {
 
-	@include desktop {
-		width: 50%;
+}
+
+.filter-button-group {
+	margin: $gap 0;
+	position: fixed;
+	z-index: 200;
+	bottom: -20px;
+	right: 30px;
+
+	.btn-floating {
+		background: $purple;
+		padding: 15px 25px;
+		border-radius: 50px;
+		display: block;
+		font-size: $size-5;
+		font-weight: $weight-semibold;
+		color: $white;
+		position: relative;
+		z-index: 20;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			vertical-align: bottom;
+			margin-right: 5px;
+
+			g {
+				fill: $white;
+			}
+		}
+	}
+
+	.filters {
+		position: fixed;
+		bottom: -100px;
+		right: 30px;
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		overflow: hidden;
+		transition: all .5s ease;
+		opacity: 0;
+		padding-bottom: 40px;
+
+		a {
+			padding: 5px 10px;
+			background: $black-lighter;
+			margin: 5px 0;
+			border-radius: 8px;
+			display: block;
+			overflow: hidden;
+
+			&:hover {
+				background: $purple;
+				color: $white;
+			}
+
+			&.active {
+				height: 0;
+				padding: 0px 10px;
+				margin: 0;
+			}
+		}
+	}
+
+	&:hover,
+	&.toggle-active {
+
+		.btn-floating {
+			background: darken($purple, 30%);
+		}
+
+		.filters {
+			bottom: 50px;
+			opacity: 1;
+		}
 	}
 }
+
 
 .portfolio-image {
 	position: relative;
@@ -69,7 +149,7 @@
 		font-family: $family-sans-serif;
 		text-transform: uppercase;
 		font-weight: 100;
-		font-size: 11px;
+		font-size: $size-7;
 		letter-spacing: 2.75px;
 		text-align: center;
 		position: relative;
@@ -77,7 +157,7 @@
 		margin-bottom: $gap;
 		background: $black;
 		display: flex;
-
+		color: $grey-dark;
 	}
 
 	.testimonial-header,
@@ -89,7 +169,7 @@
 			display: block;
 			flex: 1;
 			height: 1px;
-			background: $grey;
+			background: $grey-dark;
 			position: relative;
 			top: 5px;
 		}
@@ -103,9 +183,13 @@
 		}
 	}
 
+	&.video-testimonial video {
+		margin-bottom: $gap / 1.5;
+	}
+
 	.quote {
 		text-align: center;
-		font-size: 30px;
+		font-size: $size-3;
 		padding: 0 50px;
 		padding-top: 30px;
 		margin-bottom: $gap / 1.5;
@@ -151,14 +235,14 @@
 		h5 {
 			font-family: $family-sans-serif;
 			text-transform: uppercase;
-			font-size: 23px;
+			font-size: $size-4;
 			margin-bottom: .25em;
 		}
 		h6 {
 			font-family: $family-sans-serif;
 			font-weight: 100;
 			text-transform: uppercase;
-			font-size: 15px;
+			font-size: $size-6;
 		}
 
 		.testimonial-image {
@@ -172,6 +256,33 @@
 		}
 	}
 
+	&.video-testimonial {
+		.quote {
+			font-size: 24px;
+			padding: 20px 50px;
+			max-width: 90%;
+	    margin: 0 auto;
+	    margin-bottom: $gap / 2;
+
+			&:before, &:after {
+				width: 40px;
+				height: 40px;
+			}
+
+			&:before { left: 40px; }
+			&:after { right: 40px; }
+		}
+
+		.quote-byline {
+			.column {
+				text-align: center;
+			}
+			.column:first-child {
+				display: none;
+			}
+		}
+	}
+
 	.testimonial-footer {
 		margin-top: $gap / 1.5;
 
@@ -179,7 +290,7 @@
 			width: 19px;
 			height: 18px;
 
-			g { fill: $grey; }
+			g { fill: $grey-dark; }
 		}
 
 		&:before {

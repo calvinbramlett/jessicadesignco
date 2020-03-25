@@ -125,7 +125,8 @@ function jessicadesignco_scripts() {
 	wp_enqueue_style( 'jessica-styles', get_template_directory_uri() . '/assets/css/styles.css');
 
 	wp_enqueue_script( 'jessica-jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/assets/js/masonry.js', array(), '20151215', true );
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/assets/js/imagesloaded.js', array(), '20151215', true );
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/assets/js/jquery.fitvids.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'jessicadesignco-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -174,5 +175,21 @@ require get_template_directory() . '/inc/hide-gutenburg.php';
  * SVG Support
  */
 require get_template_directory() . '/inc/svg.php';
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Jessica Design Co. Theme Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'icon_url' 		=> "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='18px' height='17px' viewBox='0 0 18 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M9.13563223,16.9997016 C13.5858375,16.9575191 17.3438697,13.845307 18,9.65868085 C15.1248872,12.0221018 10.8301456,11.913141 8.09159401,9.40729727 C5.35304243,6.90145356 5.07250056,2.82391468 7.44435537,0 C3.11096261,0.695834181 -0.0462106671,4.2866803 0.000511804798,8.46633822 C0.0494496488,13.2204806 4.13708535,17.0388519 9.13563223,16.9997016 Z' id='Path-Copy' fill='%23FFFFFF' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E",
+		'redirect'		=> false
+	));
+	
+}
+
+add_image_size( 'full', '3000', '3000', false );
 
 

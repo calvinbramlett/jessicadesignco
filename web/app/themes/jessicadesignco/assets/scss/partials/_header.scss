@@ -1,1 +1,17 @@
 // HEADER .SCSS
+
+.video-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  mix-blend-mode: screen;
+  z-index: 2;
+  pointer-events: none;
+  opacity: .1;
+}
+
+.video-overlay {
+	position: relative;
+}

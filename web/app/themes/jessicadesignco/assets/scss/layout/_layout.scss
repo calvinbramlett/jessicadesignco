@@ -4,6 +4,13 @@ html[lang="en-US"] {
   margin-top: 0!important;
 }
 
+::selection {
+  background: #FD00FD; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #FD00FD; /* Gecko Browsers */
+}
+
 body.admin-bar {
   padding-top: 46px;
 

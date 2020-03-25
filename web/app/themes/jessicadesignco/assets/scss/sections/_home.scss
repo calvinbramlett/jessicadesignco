@@ -1,3 +1,21 @@
+.page-template-home {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: fixed;
+		z-index: 1;
+		background-image: url('../images/home-bg.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 50vw;
+		height: 90%;
+		left: 50%;
+		top: 5%;
+		transform: translateX(-5%);
+	}
+}
+
 .home #main-content {
 	width: 100vw;
 	min-height: 100vh;
@@ -5,6 +23,8 @@
 	padding-bottom: $gap;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	z-index: 5;
 
 	.container {
 		display: flex;
@@ -22,6 +42,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: $gap / 2 0;
+		padding-top: $gap / 3.5;
 		margin: 0 auto;
 		align-items: flex-start;
 
@@ -29,7 +50,7 @@
 			display: inline-block;
 			color: $white;
 			font-family: $family-serif;
-			font-size: 64px;
+			font-size: $size-0;
 			line-height: 1.25em;
 			margin-bottom: 10px;
 			position: relative;
@@ -44,19 +65,24 @@
 		}
 	}
 
-	.home-footer, .home-header {
-		text-align: right;
-		font-size: 12px;
+	a.portfolio-link {
 		color: $grey-dark;
-		position: relative;
-	}
-
-	.home-header a {
-		color: $grey-dark;
+		display: inline-block;
+		padding-bottom: 5px;
+		border-bottom: solid 3px $grey-dark;
 
 		&:hover {
 			color: $purple;
+
+			border-bottom-color: $purple;
 		}
+	}
+
+	.home-footer, .home-header {
+		text-align: right;
+		font-size: $size-7;
+		color: $grey-dark;
+		position: relative;
 	}
 
 	.home-footer:before {
@@ -68,6 +94,15 @@
 		top: 50%;
 		left: 0;
 		background: $grey-dark;
+	}
+
+	.home-footer a {
+		font-weight: $weight-bold;
+		color: $white;
+
+		&:hover {
+			color: $purple;
+		}
 	}
 }
 

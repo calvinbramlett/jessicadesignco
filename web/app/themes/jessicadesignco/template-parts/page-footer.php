@@ -30,12 +30,12 @@
 				</nav>
 
 				<?php if( !is_page_template('templates/portfolio.php') ):?>
-					<a href="/portfolio" class="portfolio-link">View My Portfolio</a>
+					<a href="<?php echo get_field('portfolio_link', 'option'); ?>" class="portfolio-link"><?php echo get_field('portfolio_link_text', 'option'); ?></a>
 				<?php endif;?>
 
 			</div>
 			<div class="column footer-button">
-				<a href="" class="btn" target="blank">Schedule a call</a>
+				<?php get_template_part('template-parts/button'); ?>
 			</div>
 		</div>
 	</footer>

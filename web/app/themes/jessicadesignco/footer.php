@@ -24,12 +24,36 @@
       $("#navbar").toggleClass("active");
     });
 
-    $('.masonry').masonry({
-		  fitWidth: true,
-		  itemSelector: '.masonry-item'
+		var $grid = $('.masonry').isotope({
+		  itemSelector: '.masonry-item',
+		  percentPosition: true,
+		  masonry: {
+  			fitWidth: true
+		  }
 		});
 
-		$('body').fitvids();
+		$grid.imagesLoaded().progress( function() {
+		  $grid.isotope('layout');
+		});
+
+		$('.btn-floating').on('click', function() {
+			$('.filter-button-group').toggleClass('toggle-active');
+		});
+
+		$('.filter-btn').on( 'click', function() {
+			 
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+		  $('.filter-btn').removeClass('active');
+		  $(this).addClass('active');
+		  var filterValue = $(this).attr('data-filter');
+		  var filterText = $(this).attr('data-value');
+		  $grid.isotope({ filter: filterValue });
+
+
+		  $('.btn-floating span').text(filterText);
+		});
+
+		$('body').fitvids({ ignore: '.video-bg'});
 
 	});
 </script>

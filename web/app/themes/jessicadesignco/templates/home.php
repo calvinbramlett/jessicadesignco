@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<header class="home-header">
-		<a class="btn" href="">Schedule a Call</a>
+		<?php get_template_part('template-parts/button'); ?>
 	</header>
 	<div class="home-content">
 		<?php if( get_field('text_graphic') ): ?>
@@ -24,7 +24,7 @@ get_header();
 			) );
 			?>
 		</nav>
-		<a href="<?php echo get_field('page_link');?>"><?php the_field('page_link_name');?></a>
+		<a href="<?php echo get_field('portfolio_link', 'option'); ?>" class="portfolio-link"><?php echo get_field('portfolio_link_text', 'option'); ?></a>
 	</div>
 	<footer class="home-footer">
 		Shop My Custom Art: <a href="https://www.thrillingunknown.com" target="blank">Thrilling Unknown</a>

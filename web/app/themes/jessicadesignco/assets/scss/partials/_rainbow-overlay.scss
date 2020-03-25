@@ -1,1 +1,9 @@
-
+.rainbow-overlay {
+	position: fixed;
+	right: -250px;
+	width: 500px;
+	top: 100px;
+	pointer-events: none;
+	z-index: 500;
+	mix-blend-mode: screen;
+}

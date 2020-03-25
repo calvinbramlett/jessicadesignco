@@ -2,6 +2,7 @@
 
 // Colors
 
+$black-dark: #000000 !default;
 $black: #0B0B0B !default;
 $black-light: #101010 !default;
 $black-lighter: #141414 !default;
@@ -42,13 +43,14 @@ $primary: $purple;
 $family-sans-serif: 'Montserrat', sans-serif;;
 $family-serif: Lowdrag;
 
-$size-1: 5.25rem !default; // 84px
-$size-2: 4rem !default; // 64px
-$size-3: 2.125rem !default; // 34px
-$size-4: 2rem !default; // 32px
-$size-5: 1.5rem !default; // 24px
-$size-6: 1.0625rem !default; // 17px
-$size-7: 0.75rem !default; // 12px
+$size-0: 4.57rem !default; // 64px
+$size-1: 3.14rem !default; // 44px
+$size-2: 2.285rem !default; // 32px
+$size-3: 2.14rem !default; // 30px
+$size-4: 1.5rem !default; // 24px
+$size-5: 1.14rem !default; // 16px
+$size-6: 1rem !default; // 14px
+$size-7: 0.875rem !default; // 12px
 
 $weight-light: 200 !default;
 $weight-normal: 400 !default;
@@ -57,7 +59,7 @@ $weight-semibold: 600 !default;
 $weight-bold: 700 !default;
 
 $body-background-color: $white !default;
-$body-size: 16px !default;
+$body-size: 14px !default;
 $body-rendering: optimizeLegibility !default;
 $body-family: $family-sans-serif !default;
 $body-color: $black !default;
@@ -68,8 +70,6 @@ $strong-color: $black !default;
 $strong-weight: $weight-bold !default;
 
 // Responsiveness
-
-$navbar-height: 88px;
 
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 50px !default;

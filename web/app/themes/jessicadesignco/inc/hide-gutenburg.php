@@ -10,6 +10,7 @@ function ea_disable_editor( $id = false ) {
 		'templates/home.php',
 		'templates/about.php',
 		'templates/portfolio.php',
+		'templates/service.php',
 		'templates/blog.php'
 	);
 

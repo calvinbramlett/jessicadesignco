@@ -10,7 +10,7 @@
 	align-items: center;
 
 	h6 {
-		font-size: 12px;
+		font-size: $size-7;
 		color: $grey-dark;
 		font-family: $family-sans-serif;
 		margin-bottom: 10px;
@@ -42,7 +42,7 @@
 		display: inline-block;
 		color: $white;
 		font-family: $family-serif;
-		font-size: 32px;
+		font-size: $size-2;
 		line-height: 1.25em;
 		margin-bottom: 10px;
 		position: relative;
